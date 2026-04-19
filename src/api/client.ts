@@ -1,8 +1,8 @@
+import type { Project } from '../types/Project';
+
 const API_URL = import.meta.env.PROD 
   ? 'https://mork-api.onrender.com/api/v1/projects'
   : 'http://localhost:3001/api/v1/projects';
-
-const API_URL = 'http://localhost:3001/api/v1/projects';
 
 export const apiClient = {
   getAll: async (): Promise<Project[]> => {
